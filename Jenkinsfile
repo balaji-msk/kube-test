@@ -18,7 +18,6 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                container('ubuntu') {
                     deleteDir()
                     checkout([
                         $class: 'GitSCM',
