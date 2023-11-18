@@ -10,7 +10,7 @@ node {
 }
 pipeline {
     agent {
-        label 'master'
+        label 'built-in node'
     }
     options {
         skipDefaultCheckout()
