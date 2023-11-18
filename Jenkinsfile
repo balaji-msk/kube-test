@@ -42,9 +42,8 @@ pipeline {
                     }
                 }
             }
-        }
+      }
 
-    }
 
   post {
       always {
