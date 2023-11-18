@@ -54,12 +54,6 @@ pipeline {
 // Uncomment the below line if you have enabled tests and would like to publish them as artifact.
 //        archiveArtifacts "cobertura.xml, **coverage_report/**, **test_logs/**"
       }
-      failure {
-          updateGitlabCommitStatus name: 'build', state: 'failed'
-      }
-      success {
-          updateGitlabCommitStatus name: 'build', state: 'success'
-      }
       cleanup {
           deleteDir() 
           dir("${env.WORKSPACE}@tmp") {
