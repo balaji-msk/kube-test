@@ -9,6 +9,9 @@ node {
     docker_registry="docker.io/library" 
 }
 pipeline {
+    agent {
+        label 'deploy||master'
+    }
     options {
         skipDefaultCheckout()
     }
