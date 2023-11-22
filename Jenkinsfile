@@ -52,7 +52,6 @@ pipeline {
           echo "Posting Pipeline GitLab Status..."
 // Uncomment the below line if you have enabled tests and would like to publish them as artifact.
 //        archiveArtifacts "cobertura.xml, **coverage_report/**, **test_logs/**"
-      }
       cleanup {
           deleteDir() 
           dir("${env.WORKSPACE}@tmp") {
