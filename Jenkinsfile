@@ -46,24 +46,3 @@ pipeline {
             }
       }
 
-
-  post {
-      always {
-          echo "Posting Pipeline GitLab Status..."
-// Uncomment the below line if you have enabled tests and would like to publish them as artifact.
-//        archiveArtifacts "cobertura.xml, **coverage_report/**, **test_logs/**"
-      cleanup {
-          deleteDir() 
-          dir("${env.WORKSPACE}@tmp") {
-              deleteDir() 
-          }
-          dir("${env.WORKSPACE}@script") {
-              deleteDir() 
-          }
-          dir("${env.WORKSPACE}@script@tmp") {
-              deleteDir() 
-          }
-      }
-   }
-}
-
