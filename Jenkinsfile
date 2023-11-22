@@ -25,9 +25,7 @@ pipeline {
                         userRemoteConfigs: [[credentialsId: 'balaji-github-creds', url: 'https://github.com/balaji-msk/kube-test.git']]
                     ])
                 }
-            }
-        }
-
+         }
         stage('Publish Artifact') {
             steps {
                 script {
@@ -45,4 +43,3 @@ pipeline {
                 }
             }
       }
-
